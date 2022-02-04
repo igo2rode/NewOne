@@ -5,29 +5,29 @@ import java.util.Scanner;
 // TODO: Use Enum and Switch for options
 public class Main {
     public static void main(String[] args) {
-        DefaultAirplane plane = new DefaultAirplane();
+        Airplane airplane = Airplane.create();
         Scanner str = new Scanner(System.in);
         menu();
         int i = -1;
         while (i != 0){
             i = str.nextInt();
             if (i == 1) {
-                plane.engineStart();
+                airplane.engineStart();
             }
             else if (i == 2) {
-                plane.takeOff();
+                airplane.takeOff();
             }
             else if (i == 3) {
-                plane.hightIncrease();
+                airplane.heightIncrease();
             }
             else if (i == 4) {
-                plane.hightDecrease();
+                airplane.heightDecrease();
             }
             else if (i == 5) {
-                plane.landing();
+                airplane.landing();
             }
             else if (i == 6) {
-                plane.switchEngineOff();
+                airplane.engineStop();
             }
             else if (i < 0 || i > 6){
                 System.out.println("Choose correct number");
