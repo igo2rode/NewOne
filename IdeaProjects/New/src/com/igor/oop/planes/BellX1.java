@@ -10,12 +10,5 @@ public class BellX1 extends AirplaneImpl {
         heightDelta = 50;
     }
 
-    @Override
-    public void engineTest() {
-        if( ! engineStarted) {
-            print("Testing engines, engine #1 - works fine, ready to start");
-        } else {
-            print("Engines already started!");
-        }
-    }
+
 }

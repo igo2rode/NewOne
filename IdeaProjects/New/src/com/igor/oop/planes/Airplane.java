@@ -13,9 +13,5 @@ public interface Airplane {
 
     void landing();
 
-    void engineTest();
 
-    static Airplane create() {
-        return new BellX1();
-    }
 }

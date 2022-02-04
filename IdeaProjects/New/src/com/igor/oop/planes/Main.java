@@ -5,7 +5,7 @@ import java.util.Scanner;
 // TODO: Use Enum and Switch for options
 public class Main {
     public static void main(String[] args) {
-        Airplane airplane = Airplane.create();
+        AirplaneCargo airplane = AirplaneCargo.create();
         Scanner str = new Scanner(System.in);
         menu();
         int i = -1;
@@ -29,6 +29,12 @@ public class Main {
             else if (i == 6) {
                 airplane.engineStop();
             }
+            else if (i == 7) {
+                airplane.load();
+            }
+            else if (i == 8) {
+                airplane.unload();
+            }
             else if (i < 0 || i > 6){
                 System.out.println("Choose correct number");
             }
@@ -44,6 +50,8 @@ public class Main {
         System.out.println("4 - decrease hight");
         System.out.println("5 - landing");
         System.out.println("6 - stop engine");
+        System.out.println("7 - load");
+        System.out.println("8 - unload");
         System.out.println("0 - exit");
     }
 }

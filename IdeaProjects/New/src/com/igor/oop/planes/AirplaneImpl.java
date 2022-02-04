@@ -21,7 +21,7 @@ public abstract class AirplaneImpl implements Airplane {
 
     protected boolean engineStarted;
     protected boolean inTheSky;
-    protected int height;
+    protected int height = 0;
     protected boolean onTheLand;
 
     @Override
@@ -64,6 +64,8 @@ public abstract class AirplaneImpl implements Airplane {
             print("Your height is " + height);
         } else if (height == heightMin) {
             print("The lowest height before landing");
+        } else if (height == 0 ) {
+            print("The minimal height didn't rich");
         }
     }
 
